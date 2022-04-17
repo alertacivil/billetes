@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>Clasificador de Billetes</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,40 +13,32 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
+
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
-  <div class="w3-bar w3-gray w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    
-  </div>
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    
-  </div>
-</div>
 
 <!-- Header -->
-<header class="w3-container w3-blue w3-center" style="padding:50px">
-  <h1 class="w3-margin w3-jumbo">Clasificador de Billetes</h1>
+<header class="w3-container w3-blue w3-center w3-padding-48">
+  <h1 class="w3-jumbo">Clasificador de Billetes</h1>
   <p class="w3-xlarge">Teacheable Machine by Google</p>
-  <button class="w3-button w3-gray w3-padding-large w3-large w3-margin-top" type="button" onclick="init()">Iniciar</button>
+  
+  
 </header> 
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container w3-center">
   <div class="w3-content">
-      <h1>Instrucciones</h1>
-      <h5 class="w3-padding-32">Pulse el botón Iniciar y permita que la aplicación utilice la camara.</h5>
+    <h1>Instrucciones</h1>
+    <h5 class="w3-padding-32">Pulse el botón Iniciar y permita que la aplicación utilice la cámara.</h5>
+  
+    <p class="w3-text-grey">Ponga un billete de curso legal de Costa Rica frente a la cámara y la aplicación lo clasificará y le dará la probabilidad de que sea de esa denominación el billete.</p>
+    
+    <button class="w3-button w3-gray w3-padding-large w3-large w3-margin-top" type="button" onclick="init()">Iniciar</button>
 
-      <p class="w3-text-grey">Ponga un billete de curso legal de Costa Rica frente a la cámara y la aplicación lo clasificará y le dará una probabilidad de la denominación del billete.</p>
-      
-      <div id="webcam-container" class="w3-center"></div>
+      <div id="webcam-container" class="w3-center w3-padding"></div>
   
       <div id="label-container" class="w3-center"></div>
 
@@ -80,8 +72,8 @@ async function init() {
 
     // Convenience function to setup a webcam
     const flip = true; // whether to flip the webcam
-    const width = 400;
-    const height = 400;
+    const width = 300;
+    const height = 300;
     webcam = new tmImage.Webcam(width, height, flip);
     await webcam.setup(); // request access to the webcam
 
